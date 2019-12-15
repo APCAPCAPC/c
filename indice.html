@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+</head>
+<style type="text/css">
+
+ 	/*Todo creado a mano. No CTRL+C y CTRL+V*/
+	@font-face{
+		src: url("Fuentes/titulos.ttf");
+		font-family: "titulos";
+	}
+
+	@font-face{
+		src: url("Fuentes/parrafos.ttf");
+		font-family: "parrafos";
+	}
+
+	.titulo{
+		font-family: "titulos";
+		font-size: 60px;
+		text-align: center;
+	}
+
+	.parrafo{
+		font-family: "parrafos";
+	}
+
+    .loader{
+     	position: fixed;
+  		left: 0px;
+    	top: 0px;
+    	width: 100%;
+    	height: 100%;
+    	z-index: 9999;
+    	background: url('imagenes/gifs/loading.gif') 50% 50% no-repeat rgb(249,249,249);
+    	opacity: .8;
+    }
+
+    .up{
+    	background-color: red;
+    	height: 80px;
+    }
+
+    .content{
+    	width: 100%;
+    	height: 500px;
+    	background-color: red;
+    	justify-content: center;
+    	display: flex;
+    	
+    }
+
+    .page{
+    	background-color: blue;
+    	width: 80%;
+
+    	
+
+    }
+    a{
+    	list-style: none;
+    }
+
+.vertical-menu {
+  width: 200px;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+img{
+	width: 15%;
+	height: 15%;
+}
+</style>
+<body style="background-color: red">
+<div class="loader"></div>
+<div class="up"></div>
+<div class="content">
+	<div class="page">
+		<div style="margin-left: 20px;" class="titulo">Index</div>
+
+			<div style="position: absolute;margin-left: 20px" class="vertical-menu">
+				<a href="index.html">Portada</a>
+				<a class="active" href="#">Index</a>
+        <a href="objectiu.html">Objectiu</a>
+			</div>
+			<div style="overflow-y: scroll;height: 75%;">
+		<div style="position: static; background-color:orange; margin-left: 25%;height: 175%; text-align: left;">
+      <div style="padding-top: 20px;"></div>
+			<div style="margin-left: 10px; width: 90%;">Objectiu:<a href="objectiu.html"><button style="margin-left: 80%;">PRUEBA</button></a></div><br><br>
+        <div style="margin-left: 10px; width: 90%;">Memoria descriptiva:</div><br>
+        <div style="margin-left: 40px;"><div>Memoria de Andres i Victor:<button style="margin-left: 56%">Memoria</button></div></div><br>
+        <div style="margin-left: 40px;"><div>Memoria de Alex i Arnau:<button style="margin-left: 57.88%">Memoria</button></div></div><br><br>
+        <div style="margin-left: 10px;">Eines i materials:</div>
+		</div></div>
+	</div>
+</div>
+</div>
+<script src="jquery/jquery.min.js"></script>
+<script type="text/javascript">
+$(window).load(function() {
+    setTimeout("$('.loader').fadeOut('slow');console.log('cleaning loading gif')",400);
+});
+
+function changecolor(x) {
+	var l = document.getElementById("1");
+	l.style.className = "red";
+	document.getElementById("1").style.className="red";
+
+}
+</script>
+</body>
+</html>
